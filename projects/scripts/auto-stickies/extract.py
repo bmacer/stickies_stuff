@@ -19,7 +19,7 @@ def extract_consolidated(consolidated_full_file_path, destination_file_path):
     nfts_i_own = list(
         filter(lambda i: "9e5ba1a373b2e45818-STICKIES_OFFICIAL" in i, j["nfts"]))
     items_i_own = list(
-        filter(lambda i: "9e5ba1a373b2e45818-STICKIES_ITEMS_GENESIS" in i, j["nfts"]))
+        filter(lambda i: "9e5ba1a373b2e45818-STICKIES_ITEMS_GENESIS" in i or "9e5ba1a373b2e45818-STICKIES_ITEMS_COLLABS" in i, j["nfts"]))
     data = {
         "nfts": [],
         "items": []

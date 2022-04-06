@@ -2,12 +2,14 @@ import random
 import json
 from itertools import chain
 import sys
+import math
+
 
 EXTRACTED_JSON = "b.json"
 SUPER_FOUNDER = "11765795-9e5ba1a373b2e45818-STICKIES_OFFICIAL-stickie_1-00000001"
 STICKIE_KSM = "G9xJaAqygUMmeoTGu4tafGK9LdDbS6k54a3mLHyWydLyUA5"
-NUM = 2
-OFFSET = 2
+NUM = 10
+OFFSET = 1
 
 
 def is_owned(j, query_owner):
@@ -88,6 +90,16 @@ def is_for_sale(nft):
     return for_sale
 
 
+def get_price(nft):
+    changes = nft["changes"]
+    price = "0"
+    if len(changes) > 0:
+        for c in changes:
+            if c["opType"] == "LIST":
+                price = c["new"]
+    return price
+
+
 def filter_for(item, from_list):
     """
     Get a certain item from a list, like "COFFEE"
@@ -97,17 +109,14 @@ def filter_for(item, from_list):
 # Get all items I own directly that are not for sale
 
 
-def get_stickies_i_own_that_are_not_for_sale(items_filename):
+def get_unlisted_stickies_i_own(items_filename):
     with open(items_filename) as infile:
         j = json.load(infile)
     stickies = j["nfts"]
     stickies_i_own = list(
         filter(lambda i: i["owner"] == STICKIE_KSM, stickies))
-    # print(f"I own {len(stickies_i_own)} Stickies")
     stickie_i_own_not_for_sale = list(
         filter(lambda i: not is_for_sale(i), stickies_i_own))
-    # print(
-    #     f"I own {len(stickie_i_own_not_for_sale)} Stickies that aren't for sale")
     return stickie_i_own_not_for_sale
 
 
@@ -117,11 +126,8 @@ def get_listed_stickies_i_own(items_filename):
     stickies = j["nfts"]
     stickies_i_own = list(
         filter(lambda i: i["owner"] == STICKIE_KSM, stickies))
-    # print(f"I own {len(stickies_i_own)} Stickies")
     listed_stickies_i_own = list(
         filter(lambda i: is_for_sale(i), stickies_i_own))
-    # print(
-    #     f"I own {len(listed_stickies_i_own)} Stickies that aren't for sale")
     return listed_stickies_i_own
 
 
@@ -131,11 +137,6 @@ def get_all_stickies_i_own(items_filename):
     stickies = j["nfts"]
     stickies_i_own = list(
         filter(lambda i: i["owner"] == STICKIE_KSM, stickies))
-    # print(f"I own {len(stickies_i_own)} Stickies")
-    # stickie_i_own_not_for_sale = list(
-    #     filter(lambda i: not is_for_sale(i), stickies_i_own))
-    # print(
-    #     f"I own {len(stickie_i_own_not_for_sale)} Stickies that aren't for sale")
     return stickies_i_own
 
 
@@ -350,28 +351,196 @@ if __name__ == "__main__":
     else:
         EXTRACTED_JSON = sys.argv[1]
 
-    unlisted_stickies_i_own = get_stickies_i_own_that_are_not_for_sale(
-        EXTRACTED_JSON)
+    with open(EXTRACTED_JSON) as infile:
+        j = json.load(infile)
 
-    listed_stickies_i_own = get_listed_stickies_i_own(
-        EXTRACTED_JSON)
+    all_stickies = j["nfts"]
+    print("\n" * 10)
+    print(f"There are {len(all_stickies)} total Stickies")
 
     all_stickies_i_own = get_all_stickies_i_own(
         EXTRACTED_JSON)
+    print(f"\n\nI own {len(all_stickies_i_own)} Stickies")
+    # choice = input("List Stickies I own? ('y' for yes, enter for no) --> ")
+    # if choice == "y":
+    print("\n\nStickies I own:")
+    print("\n".join(list(map(lambda i: i["id"], all_stickies_i_own))))
+    # input("Enter to continue...")
 
-    print(f"I own {len(all_stickies_i_own)} Stickies")
-    # for i in all_stickies_i_own:
-    #     print(i["id"])
-    print(f"I own {len(listed_stickies_i_own)} Stickies for sale")
-    print(f"I own {len(unlisted_stickies_i_own)} Stickies not for sale")
-    print("Listed Stickies:")
-    for i in listed_stickies_i_own:
-        print(i["id"])
-        print(i)
-        input()
-    print("Unlisted Stickies:")
-    for i in unlisted_stickies_i_own:
-        print(i["id"])
+    unlisted_stickies_i_own = get_unlisted_stickies_i_own(
+        EXTRACTED_JSON)
+    print(f"\n\nI own {len(unlisted_stickies_i_own)} *Unlisted* Stickies")
+    # choice = input(
+    #     "List *Unlisted* Stickies I own? ('y' for yes, enter for no) --> ")
+    # if choice == "y":
+    print("\n\nUnlisted Stickies I own:")
+    print(
+        "\n".join(list(map(lambda i: i["id"], unlisted_stickies_i_own))))
+    # input("Enter to continue...")
+
+    listed_stickies_i_own = get_listed_stickies_i_own(
+        EXTRACTED_JSON)
+    print(f"\n\nI own {len(listed_stickies_i_own)} *Listed* Stickies")
+    # choice = input(
+    #     "List *Listed* Stickies I own? ('y' for yes, enter for no) --> ")
+    # if choice == "y":
+    print("\n\nListed Stickies I own:")
+    print(
+        "\n".join(list(map(lambda i: i["id"], listed_stickies_i_own))))
+    # input("Enter to continue...")
+
+    item_filter_blacklist = {
+        "GENESIS_HANDS": ["DOWN", "UP"],
+        "COLLAB_LIAM_HAT": ["DOOR", "CLOUDS", "SPARTAN"]
+    }
+
+    item_names = [
+        "GENESIS_BACKGROUND_BEACH",
+        "GENESIS_COFFEE",
+        "GENESIS_TICKET",
+        "GENESIS_CELLPHONE",
+        "GENESIS_FLOWER",
+        "GENESIS_ICECREAM",
+        "GENESIS_HAT_COWBOY",
+        "GENESIS_HANDS_THUMBS_UP",
+        "GENESIS_HANDS_THUMBS_DOWN",
+        "GENESIS_HANDS",  # Check not THUMBS_UP or THUMBS_DOWN
+        "GENESIS_EYES_BLUE",
+        "GENESIS_SMILE",
+        "GENESIS_HAT_WITCH",
+        "GENESIS_HAT_BEANIE",
+        "GENESIS_PET_SNAKE",
+        "GENESIS_PET_SHEEP",
+        "GENESIS_PET_TURTLE",
+        "GENESIS_BACKGROUND_PARIS",
+        "GENESIS_BACKGROUND_MOUNTAINS",
+        "GENESIS_HAIR_LONG",
+        "GENESIS_LONG_HAIR_PINK",
+        "GENESIS_LONG_HAIR_BLUE",
+        "GENESIS_LONG_HAIR_BROWN",
+        "GENESIS_EYES_GREEN",
+        "GENESIS_EYES_BROWN_",
+        "GENESIS_BACKGROUND_DESERT",
+        "GENESIS_BACKGROUND_GALACTIC",
+        "GENESIS_BACKGROUND_MARS",
+        "GENESIS_BACKGROUND_OFFICE",
+        "GENESIS_BACKGROUND_SEA",
+        "GENESIS_BACKGROUND_RAINBOW",
+        "GENESIS_SUNGLASSES",
+        "GENESIS_FACE_FROWN",
+        "GENESIS_FACE_MASK",
+        "GENESIS_FACE_O",
+        "GENESIS_FACE_BEARD",
+        "GENESIS_SHOES_BLUE",
+        "GENESIS_SHOES_PINK",
+        "GENESIS_SHOES_RED",
+        "GENESIS_SHIRT_GREEN",
+        "GENESIS_SHIRT_ORANGE",
+        "GENESIS_SHIRT_YELLOW",
+        "GENESIS_SHIRT_RED",
+        "GENESIS_SHIRT_BLUE",
+        "GENESIS_SHIRT_RED",
+        "GENESIS_SHIRT_TEAL",
+        "GENESIS_SHORTS_BLUE",
+        "GENESIS_SHORTS_GREY",
+        "GENESIS_SHORTS_YELLOW",
+        "GENESIS_SKIRT_RED",
+        "GENESIS_SKIRT_PURPLE",
+        "GENESIS_SKIRT_PINK",
+        "GENESIS_PET_FISH",
+        "GENESIS_FOREGROUND_MUSHROOM",
+        "GENESIS_HANDHELD_WINE",
+        "GENESIS_BACKGROUND_RAINBOW",
+        "GENESIS_BINOCULARS",
+        "GENESIS_GOLD",
+        "GENESIS_SUNGLASSES_70",
+
+        # Kathy
+        "GENESIS_PET_CAT",
+        "GENESIS_ITEM_NET",
+        "GENESIS_PET_DINOSAUR",
+
+
+        # Veronica
+        "GENESIS_VOLLEYBALL_BG",
+
+        # Collabs
+        "STICKIE_COLLAB_BLOWTORCH",
+
+        # Kate
+        "COLLAB_STICKIE_WEED",
+
+        # Bowser
+        "COLLAB_MP3_BOWSER",
+
+        # Stickiaga
+        "COLLAB_SHIRT_STICKIAGA",
+
+        # Moridin
+        "STICKIE_COLLAB_MORIDIN_CIGAR",
+        "STICKIES_ITEMS_COLLABS-COLLAB_MORIDIN_69_SHIRT",
+
+        # Liam
+        "COLLAB_LIAM_HAT_DOOR",
+        "COLLAB_LIAM_HAT_CLOUDS",
+        "COLLAB_LIAM_HAT_SPARTAN",
+        "COLLAB_LIAM_HAT",  # Check that it's not DOOR or CLOUDS or SPARTAN
+        "COLLAB_LIAM_SUNGLASSES",
+        "COLLAB_LIAM_BACKGROUND_FARM",
+        "STICKIE_COLLAB_LIAM_CASTLE",
+        "STICKIE_COLLAB_LIAM_CLASSROOM",
+        "STICKIE_COLLAB_LIAM_SHOE",
+        "STICKIE_COLLAB_LIAM_MUSEUM",
+        "COLLAB_LIAM_SHIRT_CLOUD",
+        "COLLAB_LIAM_SHIRT_MUSHROOM",
+        "COLLAB_LIAM_SHIRT_YELLOW_STRIPED",
+
+        "COLLAB_MP3_TEST",
+
+    ]
+
+    all_items = j["items"]
+    print(
+        f"\n\nThere are {len(all_items)} total items (both GENESIS and COLLAB)")
+    print(f"There are {len(item_names)} different items")
+
+    print(
+        f"\n{'TOT':4} | {'ROOT':4} | {'OWN':4} | {'UNL':4} | {'LIS':4} | {'PRICE':5} | {'ITEM':25} | {'EXAMPLE':40}")
+    for item_name in item_names:
+        items = list(filter(lambda i: item_name in i["id"], all_items))
+        if item_name in item_filter_blacklist:
+            for black in item_filter_blacklist[item_name]:
+                items = list(filter(lambda i: black not in i["id"], items))
+        items_i_own = list(
+            filter(lambda i: i["owner"] == STICKIE_KSM, items))
+
+        items_i_rootown = list(
+            filter(lambda i: i["rootowner"] == STICKIE_KSM, items))
+
+        unlisted_items_i_own = list(
+            filter(lambda i: not is_for_sale(i), items_i_own))
+
+        listed_items_i_own = list(
+            filter(lambda i: is_for_sale(i), items_i_own))
+        extra = ""
+        price = "0"
+        if len(listed_items_i_own) > 0:
+            price = get_price(listed_items_i_own[0]) + " "
+        if len(listed_items_i_own) == 0 and len(unlisted_items_i_own) > 0:
+            extra += unlisted_items_i_own[-1]["id"]
+        elif len(listed_items_i_own) > 0:
+            extra += listed_items_i_own[-1]["id"]
+        print(
+            f"{len(items): 4} | {len(items_i_rootown): 4} | {len(items_i_own): 4} | {len(unlisted_items_i_own): 4} | {len(listed_items_i_own): 4} | {float(int(float(price)/10_000_000_000/0.85))/100:5.2} | {item_name[:25]:25} | {extra}")
+
+    for i in all_items:
+        found = False
+        for n in item_names:
+            if n in i["id"]:
+                found = True
+        if not found:
+            print(i["id"])
+            input()
 
     # list_example = 129750000000
 
@@ -437,11 +606,9 @@ if __name__ == "__main__":
     stickies = unlisted_stickies_i_own[OFFSET:NUM+OFFSET]
     for i in unlisted_stickies_i_own:
         print(i["id"])
-    input("...")
     print("Stickies I'll decorate:")
     for i in stickies:
         print(i["id"])
-    input()
     print("\n" * 20)
     data = get_random_selection_for(
         # get_random_selection_for(

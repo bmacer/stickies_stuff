@@ -69,17 +69,150 @@ export const run = async () => {
         // let stop = 10;
 
         // // [COLLAB] Liam - Castle 
-        const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
-        const SLOTS = ["background"];
-        const ITEM_NFT_SYMBOL = "STICKIE_COLLAB_LIAM_MUSEUM";
-        const SUBDIRECTORY = "collab-liam-museum"
-        const ITEM_PARTIAL_FILENAME = "museum";
-        const ITEM_TITLE = "Stickie Museum (Collaboration) # ";
-        const ITEM_DESCRIPTION = "This is a Stickie Museum, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
-            "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
-            "\n\nTotal supply of 10\n\n#";
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["background"];
+        // const ITEM_NFT_SYMBOL = "STICKIE_COLLAB_LIAM_MUSEUM";
+        // const SUBDIRECTORY = "collab-liam-museum"
+        // const ITEM_PARTIAL_FILENAME = "museum";
+        // const ITEM_TITLE = "Stickie Museum (Collaboration) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Museum, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+
+
+        // // [COLLAB] Liam - Sunglasses 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["eyewear"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_SUNGLASSES";
+        // const SUBDIRECTORY = "collab-liam-sunglasses"
+        // const ITEM_PARTIAL_FILENAME = "sunglasses";
+        // const ITEM_TITLE = "Stickie Orange Sunglasses (Collab) # ";
+        // const ITEM_DESCRIPTION = "These are Stickie Sunglasses, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Fisherman's Hat 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["hat_or_hair"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_HAT";
+        // const SUBDIRECTORY = "collab-liam-hat"
+        // const ITEM_PARTIAL_FILENAME = "hat";
+        // const ITEM_TITLE = "Stickie Fisherman's Hat (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Fisherman's Hat, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Hidden Door Hat 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["hat_or_hair"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_HAT_DOOR";
+        // const SUBDIRECTORY = "collab-liam-hat-door"
+        // const ITEM_PARTIAL_FILENAME = "hat_door";
+        // const ITEM_TITLE = "Stickie Hidden Door Hat (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Hidden Door Hat, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Clouds Hat 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["hat_or_hair"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_HAT_CLOUDS";
+        // const SUBDIRECTORY = "collab-liam-hat-clouds"
+        // const ITEM_PARTIAL_FILENAME = "hat_clouds";
+        // const ITEM_TITLE = "Stickie Clouds Hat (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Clouds Hat, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Clouds Hat 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["hat_or_hair"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_HAT_SPARTAN";
+        // const SUBDIRECTORY = "collab-liam-hat-spartan"
+        // const ITEM_PARTIAL_FILENAME = "hat_spartan";
+        // const ITEM_TITLE = "Stickie Spartan Hat (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Spartan Hat, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Background Farm 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["background"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_BACKGROUND_FARM";
+        // const SUBDIRECTORY = "collab-liam-background-farm"
+        // const ITEM_PARTIAL_FILENAME = "background-farm";
+        // const ITEM_TITLE = "Stickie Farm Background (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Farm Background, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Cloud Shirt 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["shirt"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_SHIRT_CLOUD";
+        // const SUBDIRECTORY = "collab-liam-shirt-cloud"
+        // const ITEM_PARTIAL_FILENAME = "shirt-cloud";
+        // const ITEM_TITLE = "Stickie Clouds Shirt (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Clouds Shirt, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Mushroom Shirt 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["shirt"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_SHIRT_MUSHROOM";
+        // const SUBDIRECTORY = "collab-liam-shirt-mushroom"
+        // const ITEM_PARTIAL_FILENAME = "shirt-mushroom";
+        // const ITEM_TITLE = "Stickie Mushroom Shirt (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Mushroom Shirt, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Liam - Mushroom Shirt 
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["shirt"];
+        // const ITEM_NFT_SYMBOL = "COLLAB_LIAM_SHIRT_YELLOW_STRIPED";
+        // const SUBDIRECTORY = "collab-liam-shirt-yellow-striped"
+        // const ITEM_PARTIAL_FILENAME = "shirt-yellow-striped";
+        // const ITEM_TITLE = "Stickie Yellow Striped Shirt (Collab) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Yellow Striped Shirt, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] MORIDIN - 69 Shirt 
+        const MORIDIN_KSM = "EVL7rKBDd5Xb3owtTErYMFejQnKKpAdmCd1gkijEzWvN7Pt";
+        const ROYALTY_RECEIVER = MORIDIN_KSM;
+        const SLOTS = ["shirt"];
+        const ITEM_NFT_SYMBOL = "COLLAB_MORIDIN_69_SHIRT";
+        const SUBDIRECTORY = "collab-moridin-69"
+        const ITEM_PARTIAL_FILENAME = "69";
+        const ITEM_TITLE = "Stickie #69 Shirt (Collab) # ";
+        const ITEM_DESCRIPTION = "This is a Stickie #69 Shirt, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+            "\n\nCreated by [@moridin.eth](https://twitter.com/moridin_eth)." +
+            "\n\nTotal supply of 1\n\n#";
         let start = 1;
-        let stop = 10;
+        let stop = 1;
 
         const ROYALTY_PERCENTAGE = 10;
 
