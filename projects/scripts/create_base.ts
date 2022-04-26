@@ -2,7 +2,7 @@ require('dotenv').config();
 
 import { getSlotParts, fixedParts } from "./base_composition";
 
-import { STICKIES_COLLECTION_ID, KSM_ADDRESS } from "./constants";
+import { STICKIES_COLLECTION_ID, KSM_ADDRESS, TEST_ARCHIVERSE_COLLECTION_ID } from "./constants";
 import { Base } from "rmrk-tools";
 import { sendRemarks } from "./utils";
 
@@ -31,11 +31,13 @@ export const getBaseRemark = async (base_name: string, collection_ids: string[],
 export const run = async () => {
     try {
         /// Adjustable values (see also "base_composition" to adjust the base itself)
-        const BASE_NAME = "STICKIES_NEWTEST";
+        const BASE_NAME = "TEST_ARCHIVERSE_BASE";
         const COLLECTION_IDS = [ /// Collections that may equip into slots
-            STICKIES_COLLECTION_ID,
+            TEST_ARCHIVERSE_COLLECTION_ID,
         ]
-        let base_remark = await getBaseRemark(BASE_NAME, COLLECTION_IDS, "svg");
+        let base_remark = await getBaseRemark(BASE_NAME, COLLECTION_IDS, "png");
+        console.log(base_remark);
+        base_remark = base_remark.replace("svg", "png");
         console.log(base_remark);
         readline.question("Press enter to continue (send BASE remark)...")
         let base_block = await sendRemarks([base_remark]);

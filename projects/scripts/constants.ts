@@ -2,12 +2,29 @@ require('dotenv').config();
 const fs = require('fs');
 const readline = require("readline-sync");
 
+
+export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHIVERSE";
+export const TEST_ARCHIVERSE_BASE_ID = "base-12423833-TEST_ARCHIVERSE_BASE";
+
+export const CUSTOM_BANNER_PNG_HASH = "QmWLmgRPKNofCzCvSMoCYQKF2sNNyNY74Xi7rXfd1Gn2Bx";
+export const LIMITED_BANNER_PNG_HASH = "QmaArQ8zh5xJ4eubzzfCLc3GXL3PmXdVHr6VHGErfhfGBW";
+export const LEGENDARY_BANNER_PNG_HASH = "QmdHhT25X9fkk2XSPhGJDLVTZinYMhN1VrcKX7EymdsK7v";
+export const RARE_BANNER_PNG_HASH = "QmfBBjreWoK34XCxQgr68vdm4s17DDdLURtuHn6Z2qgnDU";
+
+export const PYRAMID_THUMB_PNG_HASH = "QmejcKeRiRdnF9wWvbAw4HJdLUEMUZpBUdztNxJ5JAuPVV";
+export const OG_PREVIEW_THUMB_HASH = "QmZ4yjy9s5yhB8Q525KYmuPe9Gh8r4zk6BFmJutXpY42xV";
+
+export const PYRAMID_A_R1_DOWN_HASH = "bafkreienrwftssmy3chvgghr2zklsq5b3ghudbtal5ynnceykzqht27s7u";
+export const PYRAMID_A_L1_DOWN_HASH = "bafkreifqov66tcmqrpq4b7orhqelcjnx725evurc4tdxd6dq6sizvwtjny";
+
+
+
 // My KSM addresses
 export const TESTING_LIAM_KSM = "EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U";
 export const PROD_STICKIES_KSM = "G9xJaAqygUMmeoTGu4tafGK9LdDbS6k54a3mLHyWydLyUA5";
 
 // Defining if we are testing or prod
-export const TESTING = false;
+export const TESTING = true;
 // Is this a collab item?
 export const IS_COLLAB = true;
 
