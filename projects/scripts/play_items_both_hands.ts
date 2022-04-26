@@ -9,6 +9,8 @@ import {
     STICKIES_ITEM_COLLECTION_ID,
     SUPER_FOUNDER,
     BASE_ID,
+    TESTING_LIAM_KSM,
+    IS_COLLAB
 } from "./constants";
 
 export const run = async () => {
@@ -16,13 +18,12 @@ export const run = async () => {
         let mint_block, pause;
         pause = false;
         // pause = true;
-        // mint_block = 11724130;
+        // mint_block = 12154131;
 
         if (pause) {
             Number(readline.question("you sure?, you have pause set..."));
         }
 
-        let primary_same_as_thumb = true
 
         // left first, then right: const SLOTS = ["left_hand_holding", "right_hand_holding"];
         // Plain hand
@@ -98,28 +99,114 @@ export const run = async () => {
 
         // 1
         //         // // Red Shoes 
-        const SLOTS = ["foot_left", "foot_right"];
-        const ITEM_NFT_SYMBOL = "GENESIS_SHOES_RED";
-        const SUBDIRECTORY = "genesis-shoes-red"
-        const ITEM_PARTIAL_FILENAME = "genesis-shoes-red";
-        const ITEM_TITLE = "Stickie Red Shoe (Genesis) # ";
-        const ITEM_DESCRIPTION = "This is a Stickie Red Shoe, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL) (Genesis, total supply of 200) #";
-        let start = 101;
-        let stop = 199;
+        // const SLOTS = ["foot_left", "foot_right"];
+        // const ITEM_NFT_SYMBOL = "GENESIS_SHOES_RED";
+        // const SUBDIRECTORY = "genesis-shoes-red"
+        // const ITEM_PARTIAL_FILENAME = "genesis-shoes-red";
+        // const ITEM_TITLE = "Stickie Red Shoe (Genesis) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Red Shoe, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL) (Genesis, total supply of 200) #";
+        // let start = 101;
+        // let stop = 199;
+
+        // // [COLLAB] Liam - Shoes 
+        // let primary_same_as_thumb = false;
+        // const ROYALTY_RECEIVER = TESTING_LIAM_KSM;
+        // const SLOTS = ["foot_left", "foot_right"];
+        // const ITEM_NFT_SYMBOL = "STICKIE_COLLAB_LIAM_SHOE_RAINBOW";
+        // const SUBDIRECTORY = "collab-liam-shoes-rainbow"
+        // const ITEM_PARTIAL_FILENAME = "rainbow-shoes";
+        // const ITEM_TITLE = "Stickie Rainbow Shoe (Collaboration) # ";
+        // const ITEM_DESCRIPTION = "This is a Stickie Rainbow Shoe, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@liam](https://singular.app/space/EaL4YCtFDmBd9TfUxR3jxUJR7KQUAANgh1KWiYSKyNJXf3U)." +
+        //     "\n\nTotal supply of 20\n\n#";
+        // let start = 1;
+        // let stop = 20;
+
+        // // [COLLAB] Moridin - Martini 
+        // const MORIDIN_KSM = "EVL7rKBDd5Xb3owtTErYMFejQnKKpAdmCd1gkijEzWvN7Pt";
+        // let primary_same_as_thumb = true;
+        // const ROYALTY_RECEIVER = MORIDIN_KSM;
+        // const SLOTS = ["left_hand_holding", "right_hand_holding"];
+        // const ITEM_NFT_SYMBOL = "DRINK_MARTINI";
+        // const SUBDIRECTORY = "moridin/martini"
+        // const ITEM_PARTIAL_FILENAME = "martini";
+        // const ITEM_TITLE = "Stickie Martini # ";
+        // const ITEM_DESCRIPTION = "This is a Martini, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@moridin_eth](https://twitter.com/moridin_eth)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+        // // [COLLAB] Moridin - Cosmo 
+        // const MORIDIN_KSM = "EVL7rKBDd5Xb3owtTErYMFejQnKKpAdmCd1gkijEzWvN7Pt";
+        // let primary_same_as_thumb = true;
+        // const ROYALTY_RECEIVER = MORIDIN_KSM;
+        // const SLOTS = ["left_hand_holding", "right_hand_holding"];
+        // const ITEM_NFT_SYMBOL = "DRINK_COSMO";
+        // const SUBDIRECTORY = "moridin/cosmo"
+        // const ITEM_PARTIAL_FILENAME = "cosmo";
+        // const ITEM_TITLE = "Stickie Cosmo # ";
+        // const ITEM_DESCRIPTION = "This is a Cosmo, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@moridin_eth](https://twitter.com/moridin_eth)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
 
 
-        const THUMB_PATH_LEFT = `${ITEM_PARTIAL_FILENAME}-left_thumb.png`
-        const THUMB_PATH_RIGHT = `${ITEM_PARTIAL_FILENAME}-right_thumb.png`
-        const THUMB_PATH_PRIMARY = `${ITEM_PARTIAL_FILENAME}-right_thumb.png`
+        // // [COLLAB] Moridin - Old-Fashioned 
+        // const MORIDIN_KSM = "EVL7rKBDd5Xb3owtTErYMFejQnKKpAdmCd1gkijEzWvN7Pt";
+        // let primary_same_as_thumb = true;
+        // const ROYALTY_RECEIVER = MORIDIN_KSM;
+        // const SLOTS = ["left_hand_holding", "right_hand_holding"];
+        // const ITEM_NFT_SYMBOL = "DRINK_OLD_FASHIONED";
+        // const SUBDIRECTORY = "moridin/old-fashioned"
+        // const ITEM_PARTIAL_FILENAME = "old-fashioned";
+        // const ITEM_TITLE = "Stickie Old-Fashioned # ";
+        // const ITEM_DESCRIPTION = "This is an Old-Fashioned, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+        //     "\n\nCreated by [@moridin_eth](https://twitter.com/moridin_eth)." +
+        //     "\n\nTotal supply of 10\n\n#";
+        // let start = 1;
+        // let stop = 10;
+
+
+        // // [COLLAB] Moridin - Whiskey 
+        const MORIDIN_KSM = "EVL7rKBDd5Xb3owtTErYMFejQnKKpAdmCd1gkijEzWvN7Pt";
+        let primary_same_as_thumb = true;
+        const ROYALTY_RECEIVER = MORIDIN_KSM;
+        const SLOTS = ["left_hand_holding", "right_hand_holding"];
+        const ITEM_NFT_SYMBOL = "DRINK_WHISKEY";
+        const SUBDIRECTORY = "moridin/whiskey"
+        const ITEM_PARTIAL_FILENAME = "whiskey";
+        const ITEM_TITLE = "Stickie Whiskey # ";
+        const ITEM_DESCRIPTION = "This is a Whiskey (Neat) in a Glencairn, equippable onto a [Stickie](https://singular.app/collections/9e5ba1a373b2e45818-STICKIES_OFFICIAL)." +
+            "\n\nCreated by [@moridin_eth](https://twitter.com/moridin_eth)." +
+            "\n\nTotal supply of 10\n\n#";
+        let start = 1;
+        let stop = 10;
+
+
+
+        // let primary_same_as_thumb = true
+        const THUMB_PATH_LEFT = `${ITEM_PARTIAL_FILENAME}_thumb.png`
+        const THUMB_PATH_RIGHT = `${ITEM_PARTIAL_FILENAME}_thumb.png`
+        const THUMB_PATH_PRIMARY = `${ITEM_PARTIAL_FILENAME}_thumb.png`
         const PRIMARY_PATH = primary_same_as_thumb ? THUMB_PATH_PRIMARY : `${ITEM_PARTIAL_FILENAME}_primary.png`
+
+        // const THUMB_PATH_LEFT = `${ITEM_PARTIAL_FILENAME}-left_thumb.png`
+        // const THUMB_PATH_RIGHT = `${ITEM_PARTIAL_FILENAME}-right_thumb.png`
+        // const THUMB_PATH_PRIMARY = `${ITEM_PARTIAL_FILENAME}-right_thumb.png`
+        // const PRIMARY_PATH = primary_same_as_thumb ? THUMB_PATH_PRIMARY : `${ITEM_PARTIAL_FILENAME}_primary.png`
 
         const ROYALTY_PERCENTAGE = 10;
         const DIRECTORY = `/assets/chunky/${SUBDIRECTORY}`;
 
-        console.log("Royalty Receiver --> ", ROYALTY_RECEIVER);
+        console.log("Royalty Reciever --> ", ROYALTY_RECEIVER);
+        console.log("Start            --> ", start);
+        console.log("Stop             --> ", stop);
+        console.log("Collab           --> ", IS_COLLAB);
+        console.log("Collection       --> ", STICKIES_ITEM_COLLECTION_ID);
         console.log("Royalty Percentage --> ", ROYALTY_PERCENTAGE);
-        console.log("Starting index --> ", start);
-        console.log("Ending index --> ", stop);
+
         console.log(ITEM_TITLE);
         console.log(ITEM_DESCRIPTION);
         readline.question("Press enter to continue...")

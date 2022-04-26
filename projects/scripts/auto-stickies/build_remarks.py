@@ -8,8 +8,8 @@ import math
 EXTRACTED_JSON = "b.json"
 SUPER_FOUNDER = "11765795-9e5ba1a373b2e45818-STICKIES_OFFICIAL-stickie_1-00000001"
 STICKIE_KSM = "G9xJaAqygUMmeoTGu4tafGK9LdDbS6k54a3mLHyWydLyUA5"
-NUM = 10
-OFFSET = 1
+NUM = 12
+OFFSET = 2
 
 
 def is_owned(j, query_owner):
@@ -374,10 +374,11 @@ if __name__ == "__main__":
     #     "List *Unlisted* Stickies I own? ('y' for yes, enter for no) --> ")
     # if choice == "y":
     print("\n\nUnlisted Stickies I own:")
+    # print(unlisted_stickies_i_own)
     print(
         "\n".join(list(map(lambda i: i["id"], unlisted_stickies_i_own))))
     # input("Enter to continue...")
-
+    input()
     listed_stickies_i_own = get_listed_stickies_i_own(
         EXTRACTED_JSON)
     print(f"\n\nI own {len(listed_stickies_i_own)} *Listed* Stickies")
@@ -406,6 +407,7 @@ if __name__ == "__main__":
         "GENESIS_HANDS_THUMBS_DOWN",
         "GENESIS_HANDS",  # Check not THUMBS_UP or THUMBS_DOWN
         "GENESIS_EYES_BLUE",
+        "GENESIS_FACE_LIPS_RED",
         "GENESIS_SMILE",
         "GENESIS_HAT_WITCH",
         "GENESIS_HAT_BEANIE",
@@ -454,6 +456,7 @@ if __name__ == "__main__":
         "GENESIS_BINOCULARS",
         "GENESIS_GOLD",
         "GENESIS_SUNGLASSES_70",
+        "GENESIS_BUBBLE_GET_STUCK",
 
         # Kathy
         "GENESIS_PET_CAT",
