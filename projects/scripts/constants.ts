@@ -2,9 +2,10 @@ require('dotenv').config();
 const fs = require('fs');
 const readline = require("readline-sync");
 
-
-export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHIVERSE";
-export const TEST_ARCHIVERSE_BASE_ID = "base-12423833-TEST_ARCHIVERSE_BASE";
+// export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHIVERSE";
+export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHY_TWO";
+// export const TEST_ARCHIVERSE_BASE_ID = "base-12423833-TEST_ARCHIVERSE_BASE";
+export const TEST_ARCHIVERSE_BASE_ID = "base-12440906-TEST_ARCHY_BASE_2";
 
 export const CUSTOM_BANNER_PNG_HASH = "QmWLmgRPKNofCzCvSMoCYQKF2sNNyNY74Xi7rXfd1Gn2Bx";
 export const LIMITED_BANNER_PNG_HASH = "QmaArQ8zh5xJ4eubzzfCLc3GXL3PmXdVHr6VHGErfhfGBW";
@@ -16,6 +17,33 @@ export const OG_PREVIEW_THUMB_HASH = "QmZ4yjy9s5yhB8Q525KYmuPe9Gh8r4zk6BFmJutXpY
 
 export const PYRAMID_A_R1_DOWN_HASH = "bafkreienrwftssmy3chvgghr2zklsq5b3ghudbtal5ynnceykzqht27s7u";
 export const PYRAMID_A_L1_DOWN_HASH = "bafkreifqov66tcmqrpq4b7orhqelcjnx725evurc4tdxd6dq6sizvwtjny";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

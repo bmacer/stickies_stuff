@@ -9,30 +9,30 @@ import {
 } from "./constants";
 
 export const fixedParts: IBasePart[] = [
-    {
-        type: "fixed",
-        id: "custom",
-        src: `ipfs://ipfs/${CUSTOM_BANNER_PNG_HASH}`,
-        z: 1,
-    },
-    {
-        type: "fixed",
-        id: "limited",
-        src: `ipfs://ipfs/${LIMITED_BANNER_PNG_HASH}`,
-        z: 1,
-    },
     // {
     //     type: "fixed",
-    //     id: "legendary",
-    //     src: `ipfs://ipfs/${LEGENDARY_BANNER_PNG_HASH}`,
+    //     id: "custom",
+    //     src: `ipfs://ipfs/${CUSTOM_BANNER_PNG_HASH}`,
     //     z: 1,
     // },
     // {
     //     type: "fixed",
-    //     id: "rare",
-    //     src: `ipfs://ipfs/${RARE_BANNER_PNG_HASH}`,
+    //     id: "limited",
+    //     src: `ipfs://ipfs/${LIMITED_BANNER_PNG_HASH}`,
     //     z: 1,
     // },
+    {
+        type: "fixed",
+        id: "legendary",
+        src: `ipfs://ipfs/${LEGENDARY_BANNER_PNG_HASH}`,
+        z: 1,
+    },
+    {
+        type: "fixed",
+        id: "rare",
+        src: `ipfs://ipfs/${RARE_BANNER_PNG_HASH}`,
+        z: 1,
+    },
 ];
 
 export const getSlotParts = (equippable: string[] | "*" = []): IBasePart[] => {
@@ -45,13 +45,13 @@ export const getSlotParts = (equippable: string[] | "*" = []): IBasePart[] => {
         // },
         {
             type: "slot",
-            id: "L1-DOWN",
+            id: "L1_DOWN",
             equippable,
             z: 2,
         },
         {
             type: "slot",
-            id: "R1-DOWN",
+            id: "R1_DOWN",
             equippable,
             z: 2,
         },
