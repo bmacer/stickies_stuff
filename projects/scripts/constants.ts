@@ -35,7 +35,8 @@ if (TESTING) {
 } else {
     console.log("\n\nProduction.\n\n");
     secret_phrase = process.env.MNEMONIC_PHRASE_STICKIE_OFFICIAL;
-    collection_id = "9e5ba1a373b2e45818-STICKIES_OFF";
+    // collection_id = "9e5ba1a373b2e45818-STICKIES_OFF";
+    collection_id = "9e5ba1a373b2e45818-STICKIES_OFFICIAL";
     item_collection_id = "9e5ba1a373b2e45818-STICKIES_ITEMS_GENESIS";
     base_id = "base-11765645-STICKIES";
     // super_founder = "11765795-9e5ba1a373b2e45818-STICKIES_OFFICIAL-stickie_1-00000001";
