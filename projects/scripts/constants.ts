@@ -15,13 +15,51 @@ export const RARE_BANNER_PNG_HASH = "QmfBBjreWoK34XCxQgr68vdm4s17DDdLURtuHn6Z2qg
 export const PYRAMID_THUMB_PNG_HASH = "QmejcKeRiRdnF9wWvbAw4HJdLUEMUZpBUdztNxJ5JAuPVV";
 export const OG_PREVIEW_THUMB_HASH = "QmZ4yjy9s5yhB8Q525KYmuPe9Gh8r4zk6BFmJutXpY42xV";
 
-export const PYRAMID_A_R1_DOWN_HASH = "bafkreienrwftssmy3chvgghr2zklsq5b3ghudbtal5ynnceykzqht27s7u";
-export const PYRAMID_A_L1_DOWN_HASH = "bafkreifqov66tcmqrpq4b7orhqelcjnx725evurc4tdxd6dq6sizvwtjny";
+// export const PYRAMID_A_R1_DOWN_HASH = "bafkreienrwftssmy3chvgghr2zklsq5b3ghudbtal5ynnceykzqht27s7u";
+// export const PYRAMID_A_L1_DOWN_HASH = "bafkreifqov66tcmqrpq4b7orhqelcjnx725evurc4tdxd6dq6sizvwtjny";
 
 
+export const PYRAMID_A_L1_DOWN_HASH = "QmfSjVaTCYnjynA3FRGx8pwyooPqkvzXY76ap71VRqncVA";
+export const PYRAMID_A_L1_UP_HASH = "QmU6qeGpjcoaSoWBuYussqgSsUgv2q3PfxsB3zNpDrGcbp";
+export const PYRAMID_A_L2_DOWN_HASH = "QmcN6jecRmAPvKDQZ1HPUR2iXpxir778g8efghtZAMiymF";
+export const PYRAMID_A_L2_UP_HASH = "QmUtgdWAeGsxMLLV74QuJSD9N6Lq2GtTBsBLYbuF6w2dQH";
+export const PYRAMID_A_L3_DOWN_HASH = "QmRSEwJF3jZtsXadH1GkT31bGWDg7RBRWoXW3CFRHnCvis";
+export const PYRAMID_A_L3_UP_HASH = "QmNWWP8Se2UMH1nDv1bLZ9EjygTu1xjzH3suaQF42Yn3Dh";
+export const PYRAMID_A_L4_DOWN_HASH = "QmZqBE6Vhpqg3ZcV5RXGR5XtEdqgtZ94HLTMxbYnCKej2e";
+export const PYRAMID_A_L4_UP_HASH = "QmWCJ2aw51qaUDv3Z6QMYzAXWmdc6socyMPXnmmX37wiJF";
+export const PYRAMID_A_L5_DOWN_HASH = "QmZFM5quSaqzrYZNyWBShnzHN3oRYgEocXaNnUe5J4ieoD";
+export const PYRAMID_A_L5_UP_HASH = "QmfFdo2xa5x2PiGNaP5ptFMxyABLHV2QLcEgYW5S2g7c84";
+export const PYRAMID_A_R1_DOWN_HASH = "QmRy9rRoF8gxzU1fbcNgWSp9Duo7j1kepkaPthaudxiVuF";
+export const PYRAMID_A_R1_UP_HASH = "QmdRQUgSTvb1Zt1o4BMfNVWNMZnjvfc4q5CidLJPppusgL";
+export const PYRAMID_A_R2_DOWN_HASH = "QmVkaNyf2HNFfH1H1eg4Q2rX3zoUa9pcfZVNiyZYtys5VN";
+export const PYRAMID_A_R2_UP_HASH = "QmRvE5xcStHfe9iNaBUSekDXmeNxU5gbSacThwVRhugSyu";
+export const PYRAMID_A_R3_DOWN_HASH = "QmUiecUQpuddB6N1MX8swVgY2awHKYQDZB2Y3oyDX6vbBC";
+export const PYRAMID_A_R3_UP_HASH = "QmQFEMrBPWV8zxd455GPaydv4xbKvkGUAddeyUnjBHKgks";
+export const PYRAMID_A_R4_DOWN_HASH = "QmQXDJ1CMiDNUkLK1J583Za9bDvCFiwRjYNngrffMVk7tD";
+export const PYRAMID_A_R4_UP_HASH = "QmT1SRGgwMQRNHEd81c4S6qCz9UFivnWRfwZY4W8VvQrxz";
+export const PYRAMID_A_R5_DOWN_HASH = "QmbWHqHG2QE5rsUPts6REtnvPgvx8LGwE8doNKD78yiQkk";
+export const PYRAMID_A_R5_UP_HASH = "QmdXkhTvXBTAHDpxhM7Tv9pLJTAoAKmNsxjPutJGan2o88";
 
-
-
+export const OG_L1_DOWN_HASH = "QmVavDZCdXFYrwAoD1qv5rTCoSckEiyYMqAHZNnLvP8QqW";
+export const OG_L1_UP_HASH = "QmauFGzjVN3gjmnMWhFZTwWEtFnRuU7ZWZeanNkPzHfyXj";
+export const OG_L2_DOWN_HASH = "QmP8nr4CiEn3vzkboiHpWcQPcm8FRpz7XwNF9hHQrMib12";
+export const OG_L2_UP_HASH = "QmajHs5RMXBUNMoKNXsvhuyFqfcwXM12hUPHeg2rnUpShv";
+export const OG_L3_DOWN_HASH = "QmcM3G84JD9RWZ3ZEAzhcFtPYLnQsk1DUKnm87kYXwaQBD";
+export const OG_L3_UP_HASH = "QmbkQ61GAHJL59LHqoRqutQCJVFVNaXW3wGRjA5CdN7Hpo";
+export const OG_L4_DOWN_HASH = "QmWEjB5tsmuyk6HbBrQBD76pxy7PmsGbU9FSNdvYvBxUKs";
+export const OG_L4_UP_HASH = "QmZU7ZG9KQF8352q7d6Yq9hY4LXw96M8EXdkmgNi6HhoV8";
+export const OG_L5_DOWN_HASH = "QmTRfZngqUNEyZ6WGLRoEfToTNFeC7qVrDYrPQdpoWqJnZ";
+export const OG_L5_UP_HASH = "QmasFJViy97HhCRud4s7zageeRZgxCW7jKEc2AfYH862Wn";
+export const OG_R1_DOWN_HASH = "QmRswgSXYeb5EHmjSiQcCEi8e8fDmyvGsJd88hRS6P2HaJ";
+export const OG_R1_UP_HASH = "QmVHmdgN5zFMjXk1Ze6TsifEi1GSa9dTzQETLSX5mBTMzQ";
+export const OG_R2_DOWN_HASH = "Qmf6s8C1dwpyFVsGaxmSvwd1tJcCtYgfWjC4z8vmjpFoEe";
+export const OG_R2_UP_HASH = "Qmb3BAE8V2eeJHU7pyqJuky6k4WowyEqWZohxDrn2HqYiE";
+export const OG_R3_DOWN_HASH = "QmRxSWQswgrsfN1pxHPFo3MeApbbvzEwqVshaDjgX57pdK";
+export const OG_R3_UP_HASH = "QmaZndaieQ8f3rN8pgyENRCt4QaszMJMuZoGz5YXNVnXjh";
+export const OG_R4_DOWN_HASH = "QmZR5itJBetsxC7eAiyVeg3TZHJkGEtMsJbVixuacVvj2i";
+export const OG_R4_UP_HASH = "QmWjz2BBHdkzz8gNQgaT8APnsZdFJxWhoDgJDkJpnnGkSy";
+export const OG_R5_DOWN_HASH = "QmQzKTAqSAwsJ5sSmRCPbv56fxNBNNo9JHETVu9Gu9wmDv";
+export const OG_R5_UP_HASH = "QmYF5V9pimJoA4MtAdEsSFPpKZNzbhd7q5zzkRKYPxbdBR";
 
 
 
