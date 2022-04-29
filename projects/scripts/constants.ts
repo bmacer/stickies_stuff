@@ -4,6 +4,7 @@ const readline = require("readline-sync");
 
 // export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHIVERSE";
 export const TEST_ARCHIVERSE_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHY_TWO";
+export const TEST_ARCHIVERSE_ITEMS_COLLECTION_ID = "587a4c5c08ef2f0e51-TEST_ARCHY_TWO";
 // export const TEST_ARCHIVERSE_BASE_ID = "base-12423833-TEST_ARCHIVERSE_BASE";
 export const TEST_ARCHIVERSE_BASE_ID = "base-12440906-TEST_ARCHY_BASE_2";
 
@@ -60,15 +61,6 @@ export const OG_R4_DOWN_HASH = "QmZR5itJBetsxC7eAiyVeg3TZHJkGEtMsJbVixuacVvj2i";
 export const OG_R4_UP_HASH = "QmWjz2BBHdkzz8gNQgaT8APnsZdFJxWhoDgJDkJpnnGkSy";
 export const OG_R5_DOWN_HASH = "QmQzKTAqSAwsJ5sSmRCPbv56fxNBNNo9JHETVu9Gu9wmDv";
 export const OG_R5_UP_HASH = "QmYF5V9pimJoA4MtAdEsSFPpKZNzbhd7q5zzkRKYPxbdBR";
-
-
-
-
-
-
-
-
-
 
 
 

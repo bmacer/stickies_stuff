@@ -2,7 +2,7 @@ require('dotenv').config();
 
 import { getSlotParts, fixedParts } from "./archiverse_base_composition";
 
-import { STICKIES_COLLECTION_ID, KSM_ADDRESS, TEST_ARCHIVERSE_COLLECTION_ID } from "./constants";
+import { STICKIES_COLLECTION_ID, KSM_ADDRESS, TEST_ARCHIVERSE_COLLECTION_ID, TEST_ARCHIVERSE_ITEMS_COLLECTION_ID } from "./constants";
 import { Base } from "rmrk-tools";
 import { sendRemarks } from "./utils";
 
@@ -33,7 +33,7 @@ export const run = async () => {
         /// Adjustable values (see also "base_composition" to adjust the base itself)
         const BASE_NAME = "TEST_ARCHY_BASE_2";
         const COLLECTION_IDS = [ /// Collections that may equip into slots
-            TEST_ARCHIVERSE_COLLECTION_ID,
+            TEST_ARCHIVERSE_ITEMS_COLLECTION_ID,
         ]
         let base_remark = await getBaseRemark(BASE_NAME, COLLECTION_IDS, "png");
         base_remark = base_remark.replace("svg", "png");
